@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="googlebot" content="noindex, nofollow">
+  <title>Tall Closet</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪵</text></svg>">
+  <style>
+    :root {
+      --ink: #1c1914;
+      --muted: #5c564c;
+      --line: #ddd6c8;
+      --paper: #f6f1e6;
+      --card: #fffdf8;
+      --accent: #2f5d45;
+      --accent-2: #c45c26;
+      --sale: #9b2c14;
+      --shadow: 0 10px 30px rgba(28, 25, 20, 0.08);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: "Avenir Next", "Segoe UI", Helvetica, Arial, sans-serif;
+      background: radial-gradient(1200px 500px at 10% -10%, #efe6d2, transparent 50%),
+                  radial-gradient(900px 400px at 100% 0%, #e4eee6, transparent 45%),
+                  var(--paper);
+      color: var(--ink);
+      min-height: 100vh;
+    }
+    header {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 28px 20px 12px;
+    }
+    header h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 5vw, 3.1rem);
+      letter-spacing: -0.03em;
+      margin: 0 0 6px;
+    }
+    header p.lede {
+      margin: 0;
+      color: var(--muted);
+      max-width: 40rem;
+      line-height: 1.45;
+    }
+    .toolbar {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 16px 20px 8px;
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      background: color-mix(in srgb, var(--paper) 88%, white);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid transparent;
+    }
+    .toolbar.stuck { border-bottom-color: var(--line); }
+    .row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+    input[type="search"], select {
+      border: 1px solid var(--line);
+      background: var(--card);
+      color: var(--ink);
+      border-radius: 10px;
+      padding: 10px 12px;
+      font: inherit;
+    }
+    input[type="search"] { flex: 1 1 240px; min-width: 180px; }
+    select { min-width: 130px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+    .chip {
+      border: 1px solid var(--line);
+      background: var(--card);
+      color: var(--ink);
+      border-radius: 999px;
+      padding: 6px 11px;
+      font-size: 0.88rem;
+      cursor: pointer;
+    }
+    .chip[aria-pressed="true"] {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: white;
+    }
+    label.check {
+      display: inline-flex;
+      gap: 6px;
+      align-items: center;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+    .meta {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 8px 20px 16px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    .grid {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      gap: 16px;
+    }
+    a.card {
+      display: flex;
+      flex-direction: column;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: var(--shadow);
+      min-height: 100%;
+    }
+    a.card:hover { transform: translateY(-2px); }
+    .thumb {
+      aspect-ratio: 3 / 4;
+      background: #efe8da;
+      overflow: hidden;
+    }
+    .thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .thumb .ph {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      place-items: center;
+      color: #b3a894;
+      font-size: 0.85rem;
+    }
+    .info { padding: 12px 13px 14px; display: flex; flex-direction: column; gap: 4px; flex: 1; }
+    .store {
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .title {
+      font-size: 0.98rem;
+      line-height: 1.3;
+      margin: 0;
+      font-weight: 600;
+    }
+    .price { margin-top: auto; padding-top: 8px; font-weight: 700; }
+    .price s { color: var(--muted); font-weight: 500; margin-right: 6px; }
+    .price .sale { color: var(--sale); }
+    .flags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 6px; }
+    .flag {
+      font-size: 0.72rem;
+      background: #efe8da;
+      color: var(--muted);
+      border-radius: 999px;
+      padding: 3px 7px;
+    }
+    .empty {
+      max-width: 1180px;
+      margin: 30px auto;
+      padding: 40px 20px;
+      text-align: center;
+      color: var(--muted);
+    }
+    footer {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 10px 20px 40px;
+      color: var(--muted);
+      font-size: 0.82rem;
+      line-height: 1.45;
+    }
+    @media (max-width: 640px) {
+      .toolbar { position: static; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tall Closet</h1>
+    <p class="lede">Men’s and women’s tall clothing from a handful of stores, in one place. Tap anything to open it on the store’s own site.</p>
+  </header>
+
+  <div class="toolbar" id="toolbar">
+    <div class="row">
+      <input type="search" id="q" placeholder="Search jackets, 36 inseam, merino…" autocomplete="off">
+      <select id="sort" aria-label="Sort">
+        <option value="newest">Newest</option>
+        <option value="price-asc">Price: low to high</option>
+        <option value="price-desc">Price: high to low</option>
+      </select>
+      <select id="store" aria-label="Store">
+        <option value="">All stores</option>
+      </select>
+      <select id="price" aria-label="Price range">
+        <option value="">Any price</option>
+        <option value="0-50">Under $50</option>
+        <option value="50-100">$50–$100</option>
+        <option value="100-200">$100–$200</option>
+        <option value="200-9999">$200+</option>
+      </select>
+      <label class="check"><input type="checkbox" id="sale"> On sale</label>
+    </div>
+    <div class="chips" id="gender-chips"></div>
+    <div class="chips" id="cat-chips"></div>
+  </div>
+
+  <div class="meta" id="status">Loading catalog…</div>
+  <div class="grid" id="grid"></div>
+  <div class="empty" id="empty" hidden>No matching items. Try clearing a filter.</div>
+  <footer>
+    Family-only catalog. We don’t sell anything here — we just gather public product listings so you don’t have to hop from site to site. Prices, sizes, and photos come from each retailer and may be out of date until the next refresh.
+  </footer>
+
+  <script>
+    const GENDERS = [
+      { id: "men", label: "Men" },
+      { id: "women", label: "Women" },
+      { id: "unisex", label: "Unisex" },
+    ];
+    const CATS = [
+      "tops","shirts","sweaters","hoodies","jeans","pants","shorts",
+      "dresses","skirts","jumpsuits","outerwear","activewear",
+      "sleepwear","underwear","swim","shoes","accessories","other"
+    ];
+    const SYMBOL = { USD: "$", GBP: "£", EUR: "€", CAD: "CA$" };
+
+    const state = {
+      items: [],
+      meta: null,
+      q: "",
+      gender: "",
+      category: "",
+      store: "",
+      price: "",
+      sale: false,
+      sort: "newest",
+    };
+
+    const money = (n, ccy) => {
+      const sym = SYMBOL[ccy] || (ccy + " ");
+      return sym + Number(n).toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+    };
+
+    function chipGroup(el, items, key) {
+      items.forEach((item) => {
+        const id = typeof item === "string" ? item : item.id;
+        const label = typeof item === "string" ? item[0].toUpperCase() + item.slice(1) : item.label;
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "chip";
+        btn.textContent = label;
+        btn.setAttribute("aria-pressed", "false");
+        btn.addEventListener("click", () => {
+          state[key] = state[key] === id ? "" : id;
+          [...el.querySelectorAll(".chip")].forEach((b) => {
+            b.setAttribute("aria-pressed", String(b === btn && state[key] === id));
+          });
+          render();
+        });
+        el.appendChild(btn);
+      });
+    }
+
+    function apply() {
+      const q = state.q.trim().toLowerCase();
+      let list = state.items.filter((it) => {
+        if (state.gender && it.gender !== state.gender) return false;
+        if (state.category && it.category !== state.category) return false;
+        if (state.store && it.store !== state.store) return false;
+        if (state.sale && !it.sale) return false;
+        if (state.price) {
+          const [lo, hi] = state.price.split("-").map(Number);
+          const usd = it.price_usd ?? it.price;
+          if (usd < lo || usd > hi) return false;
+        }
+        if (q) {
+          const hay = [it.title, it.store, it.category, it.gender, ...(it.sizes || [])].join(" ").toLowerCase();
+          if (!hay.includes(q)) return false;
+        }
+        return true;
+      });
+      if (state.sort === "price-asc") list.sort((a, b) => (a.price_usd ?? a.price) - (b.price_usd ?? b.price));
+      else if (state.sort === "price-desc") list.sort((a, b) => (b.price_usd ?? b.price) - (a.price_usd ?? a.price));
+      else list.sort((a, b) => String(b.published_at || "").localeCompare(String(a.published_at || "")));
+      return list;
+    }
+
+    function render() {
+      const list = apply();
+      const grid = document.getElementById("grid");
+      const empty = document.getElementById("empty");
+      const status = document.getElementById("status");
+      const updated = state.meta?.generated_at
+        ? new Date(state.meta.generated_at).toLocaleString("en-US", { timeZone: "America/Chicago", dateStyle: "medium", timeStyle: "short" }) + " CT"
+        : "not yet";
+      status.textContent = `${list.length.toLocaleString()} item${list.length === 1 ? "" : "s"}` +
+        (list.length !== state.items.length ? ` of ${state.items.length.toLocaleString()}` : "") +
+        ` · updated ${updated}`;
+      empty.hidden = list.length > 0;
+      const max = 400;
+      const shown = list.slice(0, max);
+      grid.innerHTML = shown.map((it) => {
+        const price = it.sale
+          ? `<span class="sale">${money(it.price, it.currency)}</span> <s>${money(it.compare_at, it.currency)}</s>`
+          : money(it.price, it.currency);
+        const sizes = (it.sizes || []).slice(0, 6).join(" · ");
+        const img = it.image
+          ? `<img src="${it.image}" alt="" loading="lazy">`
+          : `<div class="ph">No photo</div>`;
+        return `<a class="card" href="${it.url}" target="_blank" rel="noopener noreferrer nofollow">
+          <div class="thumb">${img}</div>
+          <div class="info">
+            <div class="store">${it.store}</div>
+            <h2 class="title">${escapeHtml(it.title)}</h2>
+            <div class="price">${price}</div>
+            <div class="flags">
+              <span class="flag">${it.gender}</span>
+              <span class="flag">${it.category}</span>
+              ${it.sale ? `<span class="flag">sale</span>` : ""}
+            </div>
+            ${sizes ? `<div class="flag" style="margin-top:6px">${escapeHtml(sizes)}</div>` : ""}
+          </div>
+        </a>`;
+      }).join("");
+      if (list.length > max) {
+        const more = document.createElement("div");
+        more.style.cssText = "grid-column:1/-1;color:var(--muted);padding:8px 0";
+        more.textContent = `Showing the first ${max} matches. Narrow the search to see the rest.`;
+        grid.appendChild(more);
+      }
+    }
+
+    function escapeHtml(s) {
+      return String(s).replace(/[&<>"']/g, (c) => ({
+        "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+      }[c]));
+    }
+
+    chipGroup(document.getElementById("gender-chips"), GENDERS, "gender");
+    chipGroup(document.getElementById("cat-chips"), CATS, "category");
+
+    document.getElementById("q").addEventListener("input", (e) => { state.q = e.target.value; render(); });
+    document.getElementById("sort").addEventListener("change", (e) => { state.sort = e.target.value; render(); });
+    document.getElementById("store").addEventListener("change", (e) => { state.store = e.target.value; render(); });
+    document.getElementById("price").addEventListener("change", (e) => { state.price = e.target.value; render(); });
+    document.getElementById("sale").addEventListener("change", (e) => { state.sale = e.target.checked; render(); });
+
+    Promise.all([
+      fetch("data/items.json").then((r) => r.json()),
+      fetch("data/meta.json").then((r) => r.ok ? r.json() : null).catch(() => null),
+    ]).then(([items, meta]) => {
+      state.items = items;
+      state.meta = meta;
+      const stores = [...new Set(items.map((i) => i.store))].sort();
+      const sel = document.getElementById("store");
+      stores.forEach((name) => {
+        const opt = document.createElement("option");
+        opt.value = name;
+        opt.textContent = name;
+        sel.appendChild(opt);
+      });
+      render();
+    }).catch(() => {
+      document.getElementById("status").textContent = "Catalog has not been generated yet.";
+    });
+  </script>
+</body>
+</html>

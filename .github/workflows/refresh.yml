@@ -1,0 +1,49 @@
+name: Refresh tall catalog
+
+on:
+  schedule:
+    # Daily ~6:12 AM America/Chicago during CST (UTC-6). GitHub cron is often late or skipped.
+    - cron: '12 12 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: refresh-catalog
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Fetch store catalogs
+        run: python scripts/fetch_catalog.py
+
+      - name: Commit updated catalog
+        id: commit
+        run: |
+          if [ -n "$(git status --porcelain -- data/items.json data/meta.json)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+            git add data/items.json data/meta.json
+            git commit --quiet -m "Refresh tall clothing catalog"
+            git push --quiet
+            echo "pushed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Catalog unchanged."
+          fi
+
+      - name: Request Pages build
+        if: steps.commit.outputs.pushed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X POST "repos/${{ github.repository }}/pages/builds" --silent || true
