@@ -1,6 +1,6 @@
 {
   "generated_at": "2026-11-06T17:04:22.887224+00:00",
-  "item_count": 5721,
+  "item_count": 4038,
   "stores": [
     {
       "id": "american-tall",
@@ -12,29 +12,11 @@
       "ok": true
     },
     {
-      "id": "2tall",
-      "name": "2tall",
-      "fetched": 1230,
-      "kept": 1230,
-      "seconds": 5.6,
-      "error": null,
-      "ok": true
-    },
-    {
       "id": "tallslim-tees",
       "name": "TallSlim Tees",
       "fetched": 101,
       "kept": 99,
       "seconds": 0.6,
-      "error": null,
-      "ok": true
-    },
-    {
-      "id": "just-tall",
-      "name": "Just Tall",
-      "fetched": 69,
-      "kept": 68,
-      "seconds": 0.5,
       "error": null,
       "ok": true
     },
@@ -62,15 +44,6 @@
       "fetched": 242,
       "kept": 241,
       "seconds": 0.6,
-      "error": null,
-      "ok": true
-    },
-    {
-      "id": "wildflower-club",
-      "name": "The Wildflower Club",
-      "fetched": 386,
-      "kept": 385,
-      "seconds": 3.1,
       "error": null,
       "ok": true
     },
@@ -111,7 +84,8 @@
       "ok": true
     }
   ],
-  "ok_stores": 12,
+  "ok_stores": 9,
   "failed_stores": [],
-  "duration_seconds": 60.4
+  "duration_seconds": 60.4,
+  "note": "Removed The Wildflower Club, 2tall, and Just Tall (non-USD) from catalog."
 }

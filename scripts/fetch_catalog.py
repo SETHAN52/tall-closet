@@ -39,16 +39,7 @@ SOURCES = [
         "dedicated": True,
         "default_gender": None,
     },
-    {
-        "id": "2tall",
-        "name": "2tall",
-        "base": "https://www.2tall.com",
-        "currency": "GBP",
-        "mode": "collection",
-        "collection": "tall-mens-clothing",
-        "dedicated": True,
-        "default_gender": "men",
-    },
+
     {
         "id": "tallslim-tees",
         "name": "TallSlim Tees",
@@ -58,16 +49,7 @@ SOURCES = [
         "dedicated": True,
         "default_gender": "men",
     },
-    {
-        "id": "just-tall",
-        "name": "Just Tall",
-        "base": "https://justtall.com",
-        "currency": "GBP",
-        "mode": "collection",
-        "collection": "mens-tall-slim-tops",
-        "dedicated": True,
-        "default_gender": "men",
-    },
+
     {
         "id": "alloy-apparel",
         "name": "Alloy Apparel",
@@ -97,15 +79,7 @@ SOURCES = [
         "dedicated": True,
         "default_gender": "women",
     },
-    {
-        "id": "wildflower-club",
-        "name": "The Wildflower Club",
-        "base": "https://www.thewildflowerclub.com",
-        "currency": "EUR",
-        "mode": "products",
-        "dedicated": True,
-        "default_gender": "women",
-    },
+
     {
         "id": "true-classic",
         "name": "True Classic",
@@ -171,7 +145,6 @@ GENDER_WOMEN = re.compile(
     r"\b(women|womens|women's|woman|ladies|lady|female|girls?)\b", re.I
 )
 
-
 def request_json(url: str) -> dict | list | None:
     last_err = None
     for attempt in range(MAX_RETRIES):
@@ -208,7 +181,6 @@ def request_json(url: str) -> dict | list | None:
             time.sleep(wait)
     raise RuntimeError(f"Failed after retries: {url} ({last_err})")
 
-
 def paginate(url_for_page) -> list[dict]:
     products = []
     for page in range(1, MAX_PAGES + 1):
@@ -226,7 +198,6 @@ def paginate(url_for_page) -> list[dict]:
         time.sleep(0.85)
     return products
 
-
 def fetch_source(src: dict) -> list[dict]:
     base = src["base"].rstrip("/")
     if src["mode"] == "collection":
@@ -241,7 +212,6 @@ def fetch_source(src: dict) -> list[dict]:
             )
         return products
     return paginate(lambda p: f"{base}/products.json?limit={PAGE_LIMIT}&page={p}")
-
 
 def blob_of(product: dict) -> str:
     tags = product.get("tags") or ""
@@ -262,7 +232,6 @@ def blob_of(product: dict) -> str:
         ]
     )
 
-
 def looks_tall(product: dict, dedicated: bool) -> bool:
     if dedicated:
         return True
@@ -273,7 +242,6 @@ def looks_tall(product: dict, dedicated: bool) -> bool:
     if INSEAM.search(text_no_sleeve):
         return True
     return False
-
 
 def detect_gender(product: dict, default: str | None) -> str:
     title = str(product.get("title") or "")
@@ -297,7 +265,6 @@ def detect_gender(product: dict, default: str | None) -> str:
             return "men"
         return "unisex"
     return default or "unisex"
-
 
 def detect_category(product: dict) -> str:
     text = f"{product.get('title','')} {product.get('product_type','')}".lower()
@@ -325,7 +292,6 @@ def detect_category(product: dict) -> str:
             return name
     return "other"
 
-
 def parse_price(value) -> float | None:
     if value is None or value == "":
         return None
@@ -334,12 +300,10 @@ def parse_price(value) -> float | None:
     except (TypeError, ValueError):
         return None
 
-
 def cdn_thumb(src: str | None) -> str | None:
     if not src:
         return None
     return re.sub(r"\.(jpg|jpeg|png|webp)(\?|$)", r"_400x.\1\2", src, count=1, flags=re.I)
-
 
 def extract_sizes(product: dict) -> list[str]:
     options = product.get("options") or []
@@ -389,7 +353,6 @@ def extract_sizes(product: dict) -> list[str]:
         out = (ranked + rest)[:18]
     return out
 
-
 def normalize(product: dict, src: dict) -> dict | None:
     title = (product.get("title") or "").strip()
     if not title or SKIP_TITLE.search(title):
@@ -435,7 +398,6 @@ def normalize(product: dict, src: dict) -> dict | None:
         "sizes": extract_sizes(product),
         "published_at": published,
     }
-
 
 def main() -> int:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
@@ -502,7 +464,6 @@ def main() -> int:
         print(f"  {status:4} {r['name']:22} fetched={r['fetched']:4} kept={r['kept']:4} {r['error'] or ''}")
     print(f"Wrote {len(items)} items to data/items.json")
     return 0 if any(r["ok"] for r in reports) else 1
-
 
 if __name__ == "__main__":
     sys.exit(main())

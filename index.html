@@ -178,6 +178,77 @@
       font-size: 0.82rem;
       line-height: 1.45;
     }
+
+    .more-shops {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 4px 20px 10px;
+    }
+    .more-shops details {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 8px 12px 10px;
+      box-shadow: var(--shadow);
+    }
+    .more-shops summary {
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      flex-wrap: wrap;
+      font-weight: 700;
+      font-size: 0.95rem;
+      user-select: none;
+    }
+    .more-shops summary::-webkit-details-marker { display: none; }
+    .more-shops summary::before {
+      content: "▸";
+      color: var(--accent);
+      font-size: 0.85rem;
+      transition: transform 0.15s ease;
+    }
+    .more-shops details[open] summary::before { transform: rotate(90deg); }
+    .more-shops .hint {
+      font-weight: 500;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+    .shop-block { margin-top: 8px; }
+    .shop-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+    .shop-scroll {
+      display: flex;
+      gap: 7px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+    }
+    a.shop-chip {
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      color: var(--ink);
+      border-radius: 999px;
+      padding: 6px 11px;
+      font-size: 0.84rem;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    a.shop-chip:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
     @media (max-width: 640px) {
       .toolbar { position: static; }
     }
@@ -188,6 +259,46 @@
     <h1>Tall Closet</h1>
     <p class="lede">Men’s and women’s tall clothing from a handful of stores, in one place. Tap anything to open it on the store’s own site.</p>
   </header>
+
+  <section class="more-shops" aria-label="More tall shopping">
+    <details open>
+      <summary>More tall shopping <span class="hint">stores without a live feed — opens in a new tab</span></summary>
+      <div class="shop-block">
+        <div class="shop-label">Men</div>
+        <div class="shop-scroll">
+          <a class="shop-chip" href="https://www.longtallsally.com/menswear" target="_blank" rel="noopener noreferrer nofollow">Long Tall Sally</a>
+          <a class="shop-chip" href="https://www.dxl.com/o/clothes-for-tall-men" target="_blank" rel="noopener noreferrer nofollow">DXL</a>
+          <a class="shop-chip" href="https://www.duluthtrading.com/men/big-and-tall/" target="_blank" rel="noopener noreferrer nofollow">Duluth Trading</a>
+          <a class="shop-chip" href="https://www.gap.com/browse/men/tall-shop" target="_blank" rel="noopener noreferrer nofollow">Gap</a>
+          <a class="shop-chip" href="https://oldnavy.gap.com/browse/men/tall" target="_blank" rel="noopener noreferrer nofollow">Old Navy</a>
+          <a class="shop-chip" href="https://bananarepublic.gap.com/browse/mens-tall" target="_blank" rel="noopener noreferrer nofollow">Banana Republic</a>
+          <a class="shop-chip" href="https://www.jcrew.com/plp/mens/categories/clothing?fit=Tall" target="_blank" rel="noopener noreferrer nofollow">J.Crew</a>
+          <a class="shop-chip" href="https://www.llbean.com/llb/shop/813?page=mens-tall-size-clothing" target="_blank" rel="noopener noreferrer nofollow">L.L.Bean</a>
+          <a class="shop-chip" href="https://www.landsend.com/shop/mens-tall-clothing/S-xez-y5b-16t5-xec" target="_blank" rel="noopener noreferrer nofollow">Lands' End</a>
+          <a class="shop-chip" href="https://www.abercrombie.com/shop/us/mens-tall-tops-tops" target="_blank" rel="noopener noreferrer nofollow">Abercrombie</a>
+          <a class="shop-chip" href="https://www.target.com/c/men/big-tall/-/N-18y1lZq643lem91h6" target="_blank" rel="noopener noreferrer nofollow">Target</a>
+          <a class="shop-chip" href="https://www.nordstrom.com/browse/men/big-tall/clothing" target="_blank" rel="noopener noreferrer nofollow">Nordstrom</a>
+          <a class="shop-chip" href="https://www.amazon.com/s?k=Tall+Men%27s+Clothing" target="_blank" rel="noopener noreferrer nofollow">Amazon</a>
+        </div>
+      </div>
+      <div class="shop-block">
+        <div class="shop-label">Women</div>
+        <div class="shop-scroll">
+          <a class="shop-chip" href="https://www.longtallsally.com/clothing" target="_blank" rel="noopener noreferrer nofollow">Long Tall Sally</a>
+          <a class="shop-chip" href="https://www.gap.com/browse/women/tall-shop" target="_blank" rel="noopener noreferrer nofollow">Gap</a>
+          <a class="shop-chip" href="https://oldnavy.gap.com/browse/women/tall" target="_blank" rel="noopener noreferrer nofollow">Old Navy</a>
+          <a class="shop-chip" href="https://bananarepublic.gap.com/browse/women/tall" target="_blank" rel="noopener noreferrer nofollow">Banana Republic</a>
+          <a class="shop-chip" href="https://www.jcrew.com/plp/womens/categories/clothing?fit=Tall" target="_blank" rel="noopener noreferrer nofollow">J.Crew</a>
+          <a class="shop-chip" href="https://www.llbean.com/llb/shop/518021?page=womens-tall-sizes" target="_blank" rel="noopener noreferrer nofollow">L.L.Bean</a>
+          <a class="shop-chip" href="https://www.landsend.com/shop/womens-tall-clothing/S-xez-y5c-16t5-xec" target="_blank" rel="noopener noreferrer nofollow">Lands' End</a>
+          <a class="shop-chip" href="https://www.abercrombie.com/shop/us/womens?facet=length%3A%28%22Tall%22%29&filtered=true" target="_blank" rel="noopener noreferrer nofollow">Abercrombie</a>
+          <a class="shop-chip" href="https://www.target.com/s?searchTerm=tall%20women%27s%20clothing" target="_blank" rel="noopener noreferrer nofollow">Target</a>
+          <a class="shop-chip" href="https://thetallsociety.com/shop/" target="_blank" rel="noopener noreferrer nofollow">Tall Society</a>
+          <a class="shop-chip" href="https://www.amazon.com/s?k=Tall+Women%27s+Clothing" target="_blank" rel="noopener noreferrer nofollow">Amazon</a>
+        </div>
+      </div>
+    </details>
+  </section>
 
   <div class="toolbar" id="toolbar">
     <div class="row">
