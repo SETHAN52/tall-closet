@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-06T17:04:22.887224+00:00",
-  "item_count": 4038,
+  "generated_at": "2026-11-07T17:45:31.555977+00:00",
+  "item_count": 3957,
   "stores": [
     {
       "id": "american-tall",
       "name": "American Tall",
-      "fetched": 1665,
-      "kept": 1665,
-      "seconds": 9.3,
+      "fetched": 1584,
+      "kept": 1584,
+      "seconds": 8.7,
       "error": null,
       "ok": true
     },
@@ -16,7 +16,7 @@
       "name": "TallSlim Tees",
       "fetched": 101,
       "kept": 99,
-      "seconds": 0.6,
+      "seconds": 0.2,
       "error": null,
       "ok": true
     },
@@ -25,7 +25,7 @@
       "name": "Alloy Apparel",
       "fetched": 233,
       "kept": 233,
-      "seconds": 0.4,
+      "seconds": 0.5,
       "error": null,
       "ok": true
     },
@@ -34,7 +34,7 @@
       "name": "Tall Size",
       "fetched": 956,
       "kept": 955,
-      "seconds": 6.1,
+      "seconds": 5.0,
       "error": null,
       "ok": true
     },
@@ -43,7 +43,7 @@
       "name": "Amalli Talli",
       "fetched": 242,
       "kept": 241,
-      "seconds": 0.6,
+      "seconds": 0.4,
       "error": null,
       "ok": true
     },
@@ -52,7 +52,7 @@
       "name": "True Classic",
       "fetched": 279,
       "kept": 279,
-      "seconds": 2.4,
+      "seconds": 1.9,
       "error": null,
       "ok": true
     },
@@ -61,7 +61,7 @@
       "name": "DUER",
       "fetched": 83,
       "kept": 83,
-      "seconds": 0.6,
+      "seconds": 0.5,
       "error": null,
       "ok": true
     },
@@ -70,7 +70,7 @@
       "name": "Haggar",
       "fetched": 62,
       "kept": 62,
-      "seconds": 0.5,
+      "seconds": 0.4,
       "error": null,
       "ok": true
     },
@@ -79,13 +79,12 @@
       "name": "Eddie Bauer",
       "fetched": 1054,
       "kept": 421,
-      "seconds": 13.8,
+      "seconds": 12.6,
       "error": null,
       "ok": true
     }
   ],
   "ok_stores": 9,
   "failed_stores": [],
-  "duration_seconds": 60.4,
-  "note": "Removed The Wildflower Club, 2tall, and Just Tall (non-USD) from catalog."
+  "duration_seconds": 42.7
 }
