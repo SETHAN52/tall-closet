@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-08T17:56:33.780678+00:00",
-  "item_count": 3954,
+  "generated_at": "2026-11-09T22:22:17.752914+00:00",
+  "item_count": 3947,
   "stores": [
     {
       "id": "american-tall",
       "name": "American Tall",
-      "fetched": 1578,
-      "kept": 1578,
-      "seconds": 9.4,
+      "fetched": 1571,
+      "kept": 1571,
+      "seconds": 8.6,
       "error": null,
       "ok": true
     },
@@ -16,7 +16,7 @@
       "name": "TallSlim Tees",
       "fetched": 101,
       "kept": 99,
-      "seconds": 0.7,
+      "seconds": 0.5,
       "error": null,
       "ok": true
     },
@@ -25,7 +25,7 @@
       "name": "Alloy Apparel",
       "fetched": 233,
       "kept": 233,
-      "seconds": 0.5,
+      "seconds": 0.4,
       "error": null,
       "ok": true
     },
@@ -34,7 +34,7 @@
       "name": "Tall Size",
       "fetched": 959,
       "kept": 958,
-      "seconds": 6.0,
+      "seconds": 5.0,
       "error": null,
       "ok": true
     },
@@ -52,7 +52,7 @@
       "name": "True Classic",
       "fetched": 279,
       "kept": 279,
-      "seconds": 1.9,
+      "seconds": 1.8,
       "error": null,
       "ok": true
     },
@@ -79,12 +79,12 @@
       "name": "Eddie Bauer",
       "fetched": 1054,
       "kept": 421,
-      "seconds": 13.9,
+      "seconds": 13.8,
       "error": null,
       "ok": true
     }
   ],
   "ok_stores": 9,
   "failed_stores": [],
-  "duration_seconds": 46.6
+  "duration_seconds": 44.2
 }
