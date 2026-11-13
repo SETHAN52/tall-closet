@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-12T19:54:23.709405+00:00",
-  "item_count": 3945,
+  "generated_at": "2026-11-13T19:42:02.476376+00:00",
+  "item_count": 3956,
   "stores": [
     {
       "id": "american-tall",
       "name": "American Tall",
-      "fetched": 1570,
-      "kept": 1570,
-      "seconds": 9.9,
+      "fetched": 1566,
+      "kept": 1566,
+      "seconds": 9.7,
       "error": null,
       "ok": true
     },
@@ -16,7 +16,7 @@
       "name": "TallSlim Tees",
       "fetched": 101,
       "kept": 99,
-      "seconds": 0.8,
+      "seconds": 0.7,
       "error": null,
       "ok": true
     },
@@ -32,26 +32,26 @@
     {
       "id": "tall-size",
       "name": "Tall Size",
-      "fetched": 959,
-      "kept": 958,
-      "seconds": 6.1,
+      "fetched": 960,
+      "kept": 959,
+      "seconds": 6.0,
       "error": null,
       "ok": true
     },
     {
       "id": "amalli-talli",
       "name": "Amalli Talli",
-      "fetched": 242,
-      "kept": 241,
-      "seconds": 0.6,
+      "fetched": 248,
+      "kept": 247,
+      "seconds": 0.5,
       "error": null,
       "ok": true
     },
     {
       "id": "true-classic",
       "name": "True Classic",
-      "fetched": 279,
-      "kept": 279,
+      "fetched": 285,
+      "kept": 285,
       "seconds": 2.1,
       "error": null,
       "ok": true
@@ -77,14 +77,14 @@
     {
       "id": "eddie-bauer",
       "name": "Eddie Bauer",
-      "fetched": 1054,
-      "kept": 421,
-      "seconds": 14.1,
+      "fetched": 1056,
+      "kept": 423,
+      "seconds": 13.2,
       "error": null,
       "ok": true
     }
   ],
   "ok_stores": 9,
   "failed_stores": [],
-  "duration_seconds": 47.8
+  "duration_seconds": 46.4
 }
