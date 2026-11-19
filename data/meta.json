@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-18T20:31:05.362521+00:00",
-  "item_count": 4213,
+  "generated_at": "2026-11-19T20:37:23.865592+00:00",
+  "item_count": 4207,
   "stores": [
     {
       "id": "american-tall",
       "name": "American Tall",
-      "fetched": 1554,
-      "kept": 1554,
-      "seconds": 9.0,
+      "fetched": 1547,
+      "kept": 1547,
+      "seconds": 9.5,
       "error": null,
       "ok": true
     },
@@ -16,7 +16,7 @@
       "name": "TallSlim Tees",
       "fetched": 50,
       "kept": 48,
-      "seconds": 0.3,
+      "seconds": 0.7,
       "error": null,
       "ok": true
     },
@@ -25,16 +25,16 @@
       "name": "Alloy Apparel",
       "fetched": 239,
       "kept": 239,
-      "seconds": 0.4,
+      "seconds": 0.7,
       "error": null,
       "ok": true
     },
     {
       "id": "tall-size",
       "name": "Tall Size",
-      "fetched": 964,
-      "kept": 963,
-      "seconds": 4.8,
+      "fetched": 965,
+      "kept": 964,
+      "seconds": 6.0,
       "error": null,
       "ok": true
     },
@@ -43,7 +43,7 @@
       "name": "Amalli Talli",
       "fetched": 248,
       "kept": 247,
-      "seconds": 0.4,
+      "seconds": 0.9,
       "error": null,
       "ok": true
     },
@@ -52,7 +52,7 @@
       "name": "True Classic",
       "fetched": 285,
       "kept": 285,
-      "seconds": 1.7,
+      "seconds": 1.6,
       "error": null,
       "ok": true
     },
@@ -61,7 +61,7 @@
       "name": "DUER",
       "fetched": 83,
       "kept": 83,
-      "seconds": 0.6,
+      "seconds": 0.5,
       "error": null,
       "ok": true
     },
@@ -70,7 +70,7 @@
       "name": "Haggar",
       "fetched": 465,
       "kept": 371,
-      "seconds": 2.8,
+      "seconds": 3.4,
       "error": null,
       "ok": true
     },
@@ -79,12 +79,12 @@
       "name": "Eddie Bauer",
       "fetched": 1061,
       "kept": 423,
-      "seconds": 8.8,
+      "seconds": 9.0,
       "error": null,
       "ok": true
     }
   ],
   "ok_stores": 9,
   "failed_stores": [],
-  "duration_seconds": 41.5
+  "duration_seconds": 45.0
 }
