@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-20T20:18:28.439331+00:00",
-  "item_count": 4238,
+  "generated_at": "2026-11-21T19:15:47.130974+00:00",
+  "item_count": 4218,
   "stores": [
     {
       "id": "american-tall",
       "name": "American Tall",
-      "fetched": 1571,
-      "kept": 1571,
-      "seconds": 9.3,
+      "fetched": 1549,
+      "kept": 1549,
+      "seconds": 8.9,
       "error": null,
       "ok": true
     },
@@ -32,9 +32,9 @@
     {
       "id": "tall-size",
       "name": "Tall Size",
-      "fetched": 973,
-      "kept": 972,
-      "seconds": 4.9,
+      "fetched": 972,
+      "kept": 971,
+      "seconds": 5.0,
       "error": null,
       "ok": true
     },
@@ -43,15 +43,15 @@
       "name": "Amalli Talli",
       "fetched": 248,
       "kept": 247,
-      "seconds": 0.4,
+      "seconds": 0.8,
       "error": null,
       "ok": true
     },
     {
       "id": "true-classic",
       "name": "True Classic",
-      "fetched": 285,
-      "kept": 285,
+      "fetched": 288,
+      "kept": 288,
       "seconds": 1.6,
       "error": null,
       "ok": true
@@ -70,14 +70,14 @@
       "name": "Haggar",
       "fetched": 465,
       "kept": 371,
-      "seconds": 3.0,
+      "seconds": 3.2,
       "error": null,
       "ok": true
     },
     {
       "id": "eddie-bauer",
       "name": "Eddie Bauer",
-      "fetched": 1062,
+      "fetched": 1067,
       "kept": 422,
       "seconds": 8.4,
       "error": null,
@@ -86,5 +86,5 @@
   ],
   "ok_stores": 9,
   "failed_stores": [],
-  "duration_seconds": 41.5
+  "duration_seconds": 41.9
 }
