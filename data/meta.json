@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-23T23:53:30.805254+00:00",
-  "item_count": 4354,
+  "generated_at": "2026-11-24T22:26:45.809502+00:00",
+  "item_count": 4283,
   "stores": [
     {
       "id": "american-tall",
       "name": "American Tall",
-      "fetched": 1695,
-      "kept": 1695,
-      "seconds": 8.6,
+      "fetched": 1623,
+      "kept": 1623,
+      "seconds": 9.0,
       "error": null,
       "ok": true
     },
@@ -16,7 +16,7 @@
       "name": "TallSlim Tees",
       "fetched": 50,
       "kept": 48,
-      "seconds": 0.3,
+      "seconds": 0.4,
       "error": null,
       "ok": true
     },
@@ -32,9 +32,9 @@
     {
       "id": "tall-size",
       "name": "Tall Size",
-      "fetched": 962,
-      "kept": 961,
-      "seconds": 5.0,
+      "fetched": 964,
+      "kept": 963,
+      "seconds": 5.3,
       "error": null,
       "ok": true
     },
@@ -50,18 +50,18 @@
     {
       "id": "true-classic",
       "name": "True Classic",
-      "fetched": 288,
-      "kept": 288,
-      "seconds": 1.5,
+      "fetched": 292,
+      "kept": 292,
+      "seconds": 1.6,
       "error": null,
       "ok": true
     },
     {
       "id": "duer",
       "name": "DUER",
-      "fetched": 82,
-      "kept": 82,
-      "seconds": 0.4,
+      "fetched": 77,
+      "kept": 77,
+      "seconds": 0.5,
       "error": null,
       "ok": true
     },
@@ -70,21 +70,21 @@
       "name": "Haggar",
       "fetched": 465,
       "kept": 371,
-      "seconds": 2.5,
+      "seconds": 2.8,
       "error": null,
       "ok": true
     },
     {
       "id": "eddie-bauer",
       "name": "Eddie Bauer",
-      "fetched": 1068,
+      "fetched": 1074,
       "kept": 422,
-      "seconds": 8.0,
+      "seconds": 8.1,
       "error": null,
       "ok": true
     }
   ],
   "ok_stores": 9,
   "failed_stores": [],
-  "duration_seconds": 39.7
+  "duration_seconds": 41.0
 }
