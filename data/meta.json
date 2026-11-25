@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-24T22:26:45.809502+00:00",
-  "item_count": 4283,
+  "generated_at": "2026-11-25T21:41:49.823186+00:00",
+  "item_count": 4276,
   "stores": [
     {
       "id": "american-tall",
       "name": "American Tall",
-      "fetched": 1623,
-      "kept": 1623,
-      "seconds": 9.0,
+      "fetched": 1610,
+      "kept": 1610,
+      "seconds": 8.4,
       "error": null,
       "ok": true
     },
@@ -25,16 +25,16 @@
       "name": "Alloy Apparel",
       "fetched": 240,
       "kept": 240,
-      "seconds": 0.4,
+      "seconds": 0.3,
       "error": null,
       "ok": true
     },
     {
       "id": "tall-size",
       "name": "Tall Size",
-      "fetched": 964,
-      "kept": 963,
-      "seconds": 5.3,
+      "fetched": 971,
+      "kept": 970,
+      "seconds": 4.7,
       "error": null,
       "ok": true
     },
@@ -43,7 +43,7 @@
       "name": "Amalli Talli",
       "fetched": 248,
       "kept": 247,
-      "seconds": 0.4,
+      "seconds": 0.8,
       "error": null,
       "ok": true
     },
@@ -52,7 +52,7 @@
       "name": "True Classic",
       "fetched": 292,
       "kept": 292,
-      "seconds": 1.6,
+      "seconds": 1.5,
       "error": null,
       "ok": true
     },
@@ -61,7 +61,7 @@
       "name": "DUER",
       "fetched": 77,
       "kept": 77,
-      "seconds": 0.5,
+      "seconds": 0.4,
       "error": null,
       "ok": true
     },
@@ -70,21 +70,21 @@
       "name": "Haggar",
       "fetched": 465,
       "kept": 371,
-      "seconds": 2.8,
+      "seconds": 3.0,
       "error": null,
       "ok": true
     },
     {
       "id": "eddie-bauer",
       "name": "Eddie Bauer",
-      "fetched": 1074,
-      "kept": 422,
-      "seconds": 8.1,
+      "fetched": 1073,
+      "kept": 421,
+      "seconds": 8.0,
       "error": null,
       "ok": true
     }
   ],
   "ok_stores": 9,
   "failed_stores": [],
-  "duration_seconds": 41.0
+  "duration_seconds": 40.1
 }
